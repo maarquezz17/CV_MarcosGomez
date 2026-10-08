@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="accent" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9b8cff"/>
+      <stop offset=".55" stop-color="#69b7ff"/>
+      <stop offset="1" stop-color="#69e0bc"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#0b1020"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="none" stroke="url(#accent)" stroke-opacity=".8" stroke-width="2"/>
+  <path d="M15 45V19h6l11 15 11-15h6v26h-7V30L32 43 22 30v15z" fill="#f1f5fb"/>
+  <circle cx="51" cy="48" r="3" fill="#69e0bc"/>
+</svg>
