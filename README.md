@@ -1,6 +1,6 @@
 # CV_DiegoMartinez
 
-Portfolio personal de Diego Martínez, hecho con HTML, CSS y JavaScript.
+Portfolio personal de Marcos Gómez, hecho con HTML, CSS y JavaScript.
 
 ## Páginas
 
