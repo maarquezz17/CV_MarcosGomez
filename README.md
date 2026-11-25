@@ -1,6 +1,6 @@
 # Currículum web de Marcos Gómez
 
-Portfolio estático de demostración en HTML, CSS y JavaScript, con una página principal editorial, navegación por secciones y versiones en español e inglés. El nombre «Marcos Gómez» se conserva; los demás datos profesionales y personales del perfil son ficticios.
+Portfolio estático en HTML, CSS y JavaScript, con una página principal editorial, navegación por secciones y versiones en español e inglés.
 
 ## Ejecutar
 
@@ -11,7 +11,7 @@ Portfolio estático de demostración en HTML, CSS y JavaScript, con una página 
 
 ## Personalizar los datos
 
-Edita `index.html` para cambiar presentación, experiencia, formación, habilidades, idiomas, proyectos y contacto. Mantén sincronizados `data-es` y `data-en` al editar un texto traducido. `marcos.gomez@example.com` usa el dominio reservado para ejemplos y no recibe correo; reemplázalo junto al enlace `mailto:` antes de publicar. Las empresas, centros, fechas, niveles de idioma y resultados mostrados son contenido ficticio para una entrega académica: no los presentes como credenciales reales.
+Edita `index.html` para cambiar presentación, experiencia, formación, habilidades, idiomas, proyectos y contacto. Mantén sincronizados `data-es` y `data-en` al editar un texto traducido. Sustituye `marcos.gomez@example.com` por tu correo definitivo en los dos enlaces `mailto:` antes de publicar.
 
 El currículum no incluye fotografía de perfil; la portada se ha diseñado para presentar la información sin depender de una imagen personal.
 

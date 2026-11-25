@@ -562,8 +562,7 @@ h2 {
   line-height: 1.85;
 }
 
-.editable-note,
-.recognition-note {
+.editable-note {
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
@@ -575,13 +574,11 @@ h2 {
   font-size: 0.88rem;
 }
 
-.editable-note p,
-.recognition-note p {
+.editable-note p {
   margin: 0;
 }
 
-.editable-note strong,
-.recognition-note strong {
+.editable-note strong {
   color: var(--ink);
 }
 
@@ -913,17 +910,6 @@ h3 {
   margin-top: auto;
 }
 
-.project-demo-label {
-  display: block;
-  margin-top: 0.6rem;
-  color: var(--quiet);
-  font-size: 0.66rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
-
 .project-card-wide {
   min-height: 11rem;
   grid-column: 1 / -1;
@@ -938,10 +924,6 @@ h3 {
 .project-card-wide h3,
 .project-card-wide p {
   color: #f5f4ed !important;
-}
-
-.project-card-wide .project-demo-label {
-  color: #d4dfd9;
 }
 
 .project-card-wide .project-index {
@@ -961,11 +943,6 @@ h3 {
 
 .text-link:hover {
   color: #ffd2bc;
-}
-
-.recognition-note {
-  max-width: 44rem;
-  margin-top: 1.6rem;
 }
 
 .contact-section {
@@ -1156,8 +1133,7 @@ html[data-theme="dark"] .tag-list li {
   color: #e6eee7;
 }
 
-html[data-theme="dark"] .editable-note,
-html[data-theme="dark"] .recognition-note {
+html[data-theme="dark"] .editable-note {
   background: #252f29;
   color: var(--muted);
 }
