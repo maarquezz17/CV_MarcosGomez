@@ -1,14 +1,16 @@
-# CV_DiegoMartinez
+# Currículum web de Marcos Gómez
 
 Portfolio personal de Marcos Gómez, hecho con HTML, CSS y JavaScript.
 
-## Páginas
+## Contenido
 
-- `index.html`: sobre mí
-- `experience.html`: experiencia profesional
-- `education.html`: educación
-- `projects.html`: proyectos
-- `skills.html`: habilidades técnicas
-- `interests.html`: intereses
+- [index.html](./index.html): perfil y contacto
+- [experience.html](./experience.html): experiencia profesional
+- [education.html](./education.html): formación académica
+- [projects.html](./projects.html): proyectos
+- [skills.html](./skills.html): tecnologías, prácticas e idiomas
+- [interests.html](./interests.html): intereses personales
 
-La barra lateral permite navegar entre páginas independientes. El selector de idioma ofrece español e inglés mediante traducciones locales, sin servicios de traducción externos. La preferencia de idioma y el tema claro/oscuro se guardan en el navegador.
+La navegación incluye acceso por teclado y un enlace para saltar al contenido. El selector ofrece español e inglés con traducciones locales; también hay un tema claro/oscuro que respeta la preferencia del sistema y guarda la selección en el navegador.
+
+Las páginas usan recursos locales y una política CSP para limitar la carga de scripts, estilos, imágenes y fuentes a este sitio. El enlace externo de contacto lleva al perfil público de GitHub.

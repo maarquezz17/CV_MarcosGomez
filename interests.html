@@ -3,30 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'" />
+    <meta name="referrer" content="no-referrer" />
     <meta name="description" content="Intereses de Marcos Gómez" />
     <title data-es="Intereses | Marcos Gómez" data-en="Interests | Marcos Gómez">Intereses | Marcos Gómez</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <script>
-        try {
-            var savedTheme = localStorage.getItem('theme');
-            if (!savedTheme) savedTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        } catch (e) {}
-    </script>
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <link href="css/styles.css" rel="stylesheet" />
+    <script src="js/scripts.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
     <div class="site-controls" role="group" aria-label="Preferencias de la página">
         <label class="visually-hidden" for="langSelect" data-es="Idioma" data-en="Language">Idioma</label>
         <select id="langSelect" class="control-select" aria-label="Idioma"><option value="es">Español</option><option value="en">English</option></select>
-        <button type="button" class="control-btn" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema"><i class="fas fa-moon icon-moon" aria-hidden="true"></i><i class="fas fa-sun icon-sun" aria-hidden="true"></i></button>
+        <button type="button" class="control-btn" id="themeToggle" aria-label="Cambiar tema de color" title="Cambiar tema de color" aria-pressed="false"><span class="theme-glyph" aria-hidden="true">◐</span></button>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" aria-label="Navegación principal">
         <a class="navbar-brand" href="index.html"><span class="d-block d-lg-none">Marcos Gómez</span><span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Marcos Gómez" /></span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Abrir navegación"><span class="navbar-toggler-icon"></span></button>
+        <button class="navbar-toggler" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Mostrar u ocultar navegación"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarResponsive"><ul class="navbar-nav">
             <li class="nav-item"><a class="nav-link" href="index.html"><span data-es="Sobre mí" data-en="About me">Sobre mí</span></a></li>
             <li class="nav-item"><a class="nav-link" href="experience.html"><span data-es="Experiencia" data-en="Experience">Experiencia</span></a></li>
@@ -36,14 +30,22 @@
             <li class="nav-item"><a class="nav-link active" href="interests.html" aria-current="page"><span data-es="Intereses" data-en="Interests">Intereses</span></a></li>
         </ul></div>
     </nav>
-    <main class="container-fluid p-0">
-        <section class="resume-section"><div class="resume-section-content">
-            <h2 class="mb-4" data-es="Intereses" data-en="Interests">Intereses</h2>
-            <p><span data-es="Me apasiona el " data-en="I am passionate about ">Me apasiona el </span><strong data-es="baloncesto" data-en="basketball">baloncesto</strong><span data-es=", deporte que practico activamente en ligas locales para mantenerme en forma y cultivar el trabajo en equipo." data-en=", which I actively play in local leagues to stay fit and build teamwork.">, deporte que practico activamente en ligas locales para mantenerme en forma y cultivar el trabajo en equipo.</span></p>
-            <p class="mb-0"><span data-es="En mi tiempo libre me encanta la " data-en="In my free time, I love ">En mi tiempo libre me encanta la </span><strong data-es="cocina" data-en="cooking">cocina</strong><span data-es=", probando nuevas recetas de gastronomía internacional y repostería artesanal, así como explorar nuevas tecnologías y colaborar en proyectos de " data-en=", trying international recipes and artisan baking, as well as exploring new technologies and collaborating on ">, probando nuevas recetas de gastronomía internacional y repostería artesanal, así como explorar nuevas tecnologías y colaborar en proyectos de </span><strong data-es="programación" data-en="programming">programación</strong><span> open-source.</span></p>
+    <main class="container-fluid p-0" id="main-content">
+        <section class="resume-section" aria-labelledby="page-title"><div class="resume-section-content">
+            <p class="section-kicker" data-es="Fuera del código" data-en="Beyond the code">Fuera del código</p>
+            <h1 class="mb-4" id="page-title" data-es="Intereses" data-en="Interests">Intereses</h1>
+            <ul class="interest-list">
+                <li data-es="Baloncesto" data-en="Basketball">Baloncesto</li>
+                <li data-es="Cocina y nuevas recetas" data-en="Cooking and new recipes">Cocina y nuevas recetas</li>
+                <li data-es="Tecnología" data-en="Technology">Tecnología</li>
+                <li data-es="Proyectos open-source" data-en="Open-source projects">Proyectos open-source</li>
+            </ul>
+            <div class="info-card">
+                <h2 class="h3" data-es="Intereses personales" data-en="Personal interests">Intereses personales</h2>
+                <p><span data-es="Me apasiona el " data-en="I am passionate about ">Me apasiona el </span><strong data-es="baloncesto" data-en="basketball">baloncesto</strong><span data-es=", deporte que practico activamente en ligas locales para mantenerme en forma y cultivar el trabajo en equipo." data-en=", which I actively play in local leagues to stay fit and build teamwork.">, deporte que practico activamente en ligas locales para mantenerme en forma y cultivar el trabajo en equipo.</span></p>
+                <p class="mb-0"><span data-es="En mi tiempo libre me encanta la " data-en="In my free time, I love ">En mi tiempo libre me encanta la </span><strong data-es="cocina" data-en="cooking">cocina</strong><span data-es=", probando nuevas recetas de gastronomía internacional y repostería artesanal, así como explorar nuevas tecnologías y colaborar en proyectos de " data-en=", trying international recipes and artisan baking, as well as exploring new technologies and collaborating on ">, probando nuevas recetas de gastronomía internacional y repostería artesanal, así como explorar nuevas tecnologías y colaborar en proyectos de </span><strong data-es="programación" data-en="programming">programación</strong><span> open-source.</span></p>
+            </div>
         </div></section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/scripts.js"></script>
 </body>
 </html>
