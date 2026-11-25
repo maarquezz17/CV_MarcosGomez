@@ -3,58 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; upgrade-insecure-requests" />
     <meta name="referrer" content="no-referrer" />
-    <meta name="description" content="Educación de Marcos Gómez" />
-    <title data-es="Educación | Marcos Gómez" data-en="Education | Marcos Gómez">Educación | Marcos Gómez</title>
+    <meta name="description" content="Formación académica ficticia de Marcos Gómez. Sección integrada en su currículum web de demostración." />
+    <title data-es="Formación | Marcos Gómez" data-en="Education | Marcos Gómez">Formación | Marcos Gómez</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/portfolio.css" rel="stylesheet" />
     <script src="js/scripts.js" defer></script>
 </head>
-<body>
+<body class="legacy-page">
     <a class="skip-link" href="#main-content" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
-    <div class="site-controls" role="group" aria-label="Preferencias de la página">
-        <label class="visually-hidden" for="langSelect" data-es="Idioma" data-en="Language">Idioma</label>
-        <select id="langSelect" class="control-select" aria-label="Idioma"><option value="es">Español</option><option value="en">English</option></select>
-        <button type="button" class="control-btn" id="themeToggle" aria-label="Cambiar tema de color" title="Cambiar tema de color" aria-pressed="false"><span class="theme-glyph" aria-hidden="true">◐</span></button>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" aria-label="Navegación principal">
-        <a class="navbar-brand" href="index.html"><span class="d-block d-lg-none">Marcos Gómez</span><span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Marcos Gómez" /></span></a>
-        <button class="navbar-toggler" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Mostrar u ocultar navegación"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive"><ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html"><span data-es="Sobre mí" data-en="About me">Sobre mí</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="experience.html"><span data-es="Experiencia" data-en="Experience">Experiencia</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="education.html" aria-current="page"><span data-es="Educación" data-en="Education">Educación</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html"><span data-es="Proyectos" data-en="Projects">Proyectos</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="skills.html"><span data-es="Habilidades" data-en="Skills">Habilidades</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="interests.html"><span data-es="Intereses" data-en="Interests">Intereses</span></a></li>
-        </ul></div>
-    </nav>
-    <main class="container-fluid p-0" id="main-content">
-        <section class="resume-section" aria-labelledby="page-title"><div class="resume-section-content">
-            <p class="section-kicker" data-es="Formación académica" data-en="Academic background">Formación académica</p>
-            <h1 class="mb-4" id="page-title" data-es="Educación" data-en="Education">Educación</h1>
-            <article class="resume-entry">
-            <div class="entry-heading">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0">IES Tecnológico de Madrid</h3>
-                    <p class="entry-org" data-es="Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)" data-en="Higher Technician in Multiplatform Application Development">Técnico Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</p>
-                </div>
-                <span class="entry-date" data-es="Septiembre 2021 - Junio 2023" data-en="September 2021 - June 2023">Septiembre 2021 - Junio 2023</span>
-            </div>
-            <p data-es="Especialización en entornos móviles, bases de datos relacionales/NoSQL y programación orientada a objetos." data-en="Specialized in mobile environments, relational/NoSQL databases, and object-oriented programming.">Especialización en entornos móviles, bases de datos relacionales/NoSQL y programación orientada a objetos.</p>
-            </article>
-            <article class="resume-entry">
-            <div class="entry-heading">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0" data-es="Universidad Politécnica de Madrid" data-en="Technical University of Madrid">Universidad Politécnica de Madrid</h3>
-                    <p class="entry-org" data-es="Grado en Ingeniería del Software" data-en="BSc in Software Engineering">Grado en Ingeniería del Software</p>
-                </div>
-                <span class="entry-date" data-es="Septiembre 2017 - Junio 2021" data-en="September 2017 - June 2021">Septiembre 2017 - Junio 2021</span>
-            </div>
-            <p data-es="Ciclo de vida del software, arquitectura de sistemas, estructuras de datos y algoritmos." data-en="Software lifecycle, systems architecture, data structures, and algorithms.">Ciclo de vida del software, arquitectura de sistemas, estructuras de datos y algoritmos.</p>
-            </article>
-        </div></section>
+    <header class="legacy-header">
+        <a class="brand-mark" href="index.html"><span class="brand-monogram" aria-hidden="true">MG</span><span class="brand-name">Marcos Gómez</span></a>
+    </header>
+    <main class="legacy-message" id="main-content">
+        <div>
+            <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span><span data-es="Sección del currículum" data-en="Résumé section">Sección del currículum</span></p>
+            <h1 data-es="Formación" data-en="Education">Formación</h1>
+            <p data-es="Esta sección forma parte del currículum de una sola página. Los datos del perfil son ficticios para una demostración académica." data-en="This section is part of the one-page résumé. Profile details are fictional and for an academic demonstration.">Esta sección forma parte del currículum de una sola página. Los datos del perfil son ficticios para una demostración académica.</p>
+            <a class="button button-primary" href="index.html#formacion"><span data-es="Ver formación" data-en="View education">Ver formación</span><span aria-hidden="true">↗</span></a>
+        </div>
     </main>
 </body>
 </html>

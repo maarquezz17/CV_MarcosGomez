@@ -3,63 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; upgrade-insecure-requests" />
     <meta name="referrer" content="no-referrer" />
-    <meta name="description" content="Proyectos de Marcos Gómez" />
+    <meta name="description" content="Proyectos ficticios de Marcos Gómez. Sección integrada en su currículum web de demostración." />
     <title data-es="Proyectos | Marcos Gómez" data-en="Projects | Marcos Gómez">Proyectos | Marcos Gómez</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/portfolio.css" rel="stylesheet" />
     <script src="js/scripts.js" defer></script>
 </head>
-<body>
+<body class="legacy-page">
     <a class="skip-link" href="#main-content" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
-    <div class="site-controls" role="group" aria-label="Preferencias de la página">
-        <label class="visually-hidden" for="langSelect" data-es="Idioma" data-en="Language">Idioma</label>
-        <select id="langSelect" class="control-select" aria-label="Idioma"><option value="es">Español</option><option value="en">English</option></select>
-        <button type="button" class="control-btn" id="themeToggle" aria-label="Cambiar tema de color" title="Cambiar tema de color" aria-pressed="false"><span class="theme-glyph" aria-hidden="true">◐</span></button>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" aria-label="Navegación principal">
-        <a class="navbar-brand" href="index.html"><span class="d-block d-lg-none">Marcos Gómez</span><span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Marcos Gómez" /></span></a>
-        <button class="navbar-toggler" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Mostrar u ocultar navegación"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive"><ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html"><span data-es="Sobre mí" data-en="About me">Sobre mí</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="experience.html"><span data-es="Experiencia" data-en="Experience">Experiencia</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="education.html"><span data-es="Educación" data-en="Education">Educación</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="projects.html" aria-current="page"><span data-es="Proyectos" data-en="Projects">Proyectos</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="skills.html"><span data-es="Habilidades" data-en="Skills">Habilidades</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="interests.html"><span data-es="Intereses" data-en="Interests">Intereses</span></a></li>
-        </ul></div>
-    </nav>
-    <main class="container-fluid p-0" id="main-content">
-        <section class="resume-section" aria-labelledby="page-title"><div class="resume-section-content">
-            <p class="section-kicker" data-es="Trabajo seleccionado" data-en="Selected work">Trabajo seleccionado</p>
-            <h1 class="mb-4" id="page-title" data-es="Proyectos" data-en="Projects">Proyectos</h1>
-            <div class="project-grid">
-                <article class="project-card">
-                    <span class="project-number">01 / MOBILE</span>
-                    <h3>BasketStat Tracker</h3>
-                    <p data-es="Aplicación móvil para registrar estadísticas en tiempo real durante partidos de baloncesto." data-en="Mobile app for recording real-time statistics during basketball games.">Aplicación móvil para registrar estadísticas en tiempo real durante partidos de baloncesto.</p>
-                    <ul class="tag-list" aria-label="Tecnologías">
-                        <li class="tag">Flutter</li>
-                        <li class="tag">Firebase</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <span class="project-number">02 / WEB + MOBILE</span>
-                    <h3>ChefBook</h3>
-                    <p data-es="Plataforma para organizar recetas personales, planificar menús semanales y generar listas de compras." data-en="A platform to organize personal recipes, plan weekly menus, and create shopping lists.">Plataforma para organizar recetas personales, planificar menús semanales y generar listas de compras.</p>
-                    <ul class="tag-list" aria-label="Tecnologías">
-                        <li class="tag">React</li>
-                        <li class="tag">Node.js</li>
-                    </ul>
-                </article>
-                <article class="project-card">
-                    <span class="project-number">03 / OPEN SOURCE</span>
-                    <h3 data-es="Portfolio y microservicios" data-en="Portfolio and microservices">Portfolio y microservicios</h3>
-                    <p><span data-es="Proyectos personales y utilidades disponibles en " data-en="Personal projects and utilities available on ">Proyectos personales y utilidades disponibles en </span><a href="https://github.com/maarquezz17" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-                </article>
-            </div>
-        </div></section>
+    <header class="legacy-header">
+        <a class="brand-mark" href="index.html"><span class="brand-monogram" aria-hidden="true">MG</span><span class="brand-name">Marcos Gómez</span></a>
+    </header>
+    <main class="legacy-message" id="main-content">
+        <div>
+            <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span><span data-es="Sección del currículum" data-en="Résumé section">Sección del currículum</span></p>
+            <h1 data-es="Proyectos" data-en="Projects">Proyectos</h1>
+            <p data-es="Esta sección forma parte del currículum de una sola página. Los datos del perfil son ficticios para una demostración académica." data-en="This section is part of the one-page résumé. Profile details are fictional and for an academic demonstration.">Esta sección forma parte del currículum de una sola página. Los datos del perfil son ficticios para una demostración académica.</p>
+            <a class="button button-primary" href="index.html#proyectos"><span data-es="Ver proyectos" data-en="View projects">Ver proyectos</span><span aria-hidden="true">↗</span></a>
+        </div>
     </main>
 </body>
 </html>

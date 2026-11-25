@@ -3,6 +3,13 @@ const languageSelect = document.getElementById('langSelect');
 const themeToggle = document.getElementById('themeToggle');
 const navbarToggler = document.querySelector('.navbar-toggler');
 const navbar = document.getElementById('navbarResponsive');
+const readingProgress = document.getElementById('readingProgress');
+const backToTop = document.getElementById('backToTop');
+const printButton = document.getElementById('printCv');
+
+if ('IntersectionObserver' in window) {
+    root.classList.add('js-ready');
+}
 
 function readPreference(key) {
     try {
@@ -27,6 +34,9 @@ function setLanguage(language) {
     document.querySelectorAll('[data-es][data-en]').forEach(function (element) {
         element.textContent = element.dataset[selectedLanguage];
     });
+    document.querySelectorAll('[data-aria-es][data-aria-en]').forEach(function (element) {
+        element.setAttribute('aria-label', element.getAttribute('data-aria-' + selectedLanguage));
+    });
 
     if (languageSelect) {
         languageSelect.value = selectedLanguage;
@@ -46,6 +56,12 @@ function setLanguage(language) {
 
     if (navbarToggler) {
         navbarToggler.setAttribute('aria-label', selectedLanguage === 'en' ? 'Toggle navigation' : 'Mostrar u ocultar navegación');
+    }
+
+    if (backToTop) {
+        const label = selectedLanguage === 'en' ? 'Back to top' : 'Volver al principio';
+        backToTop.setAttribute('aria-label', label);
+        backToTop.setAttribute('title', label);
     }
 
     savePreference('lang', selectedLanguage);
@@ -92,5 +108,73 @@ if (navbarToggler && navbar) {
             navbar.classList.remove('show');
             navbarToggler.setAttribute('aria-expanded', 'false');
         });
+    });
+}
+
+function updateScrollControls() {
+    const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (readingProgress) {
+        readingProgress.value = scrollableHeight > 0
+            ? Math.round((window.scrollY / scrollableHeight) * 100)
+            : 0;
+    }
+    if (backToTop) {
+        backToTop.hidden = window.scrollY < 320;
+    }
+}
+
+window.addEventListener('scroll', updateScrollControls, { passive: true });
+window.addEventListener('resize', updateScrollControls);
+updateScrollControls();
+
+if (backToTop) {
+    backToTop.addEventListener('click', function () {
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
+    });
+}
+
+if (printButton) {
+    printButton.addEventListener('click', function () {
+        window.print();
+    });
+}
+
+if ('IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(function (element) {
+        revealObserver.observe(element);
+    });
+
+    const sectionLinks = new Map(
+        Array.from(document.querySelectorAll('.nav-link[href^="#"]')).map(function (link) {
+            return [link.getAttribute('href').slice(1), link];
+        })
+    );
+    const sectionObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+                return;
+            }
+            sectionLinks.forEach(function (link) {
+                link.removeAttribute('aria-current');
+            });
+            const activeLink = sectionLinks.get(entry.target.id);
+            if (activeLink) {
+                activeLink.setAttribute('aria-current', 'location');
+            }
+        });
+    }, { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
+
+    document.querySelectorAll('main .cv-section[id]').forEach(function (section) {
+        sectionObserver.observe(section);
     });
 }

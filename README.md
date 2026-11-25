@@ -1,16 +1,30 @@
 # Currículum web de Marcos Gómez
 
-Portfolio personal de Marcos Gómez, hecho con HTML, CSS y JavaScript.
+Portfolio estático de demostración en HTML, CSS y JavaScript, con una página principal editorial, navegación por secciones y versiones en español e inglés. El nombre «Marcos Gómez» se conserva; los demás datos profesionales y personales del perfil son ficticios.
 
-## Contenido
+## Ejecutar
 
-- [index.html](./index.html): perfil y contacto
-- [experience.html](./experience.html): experiencia profesional
-- [education.html](./education.html): formación académica
-- [projects.html](./projects.html): proyectos
-- [skills.html](./skills.html): tecnologías, prácticas e idiomas
-- [interests.html](./interests.html): intereses personales
+- Abre `index.html` en un navegador para consultar el currículum.
+- Para probarlo como sitio web, sirve la carpeta raíz con un servidor estático local o la extensión Live Server de VS Code.
+- El proyecto no necesita gestor de paquetes ni dependencias JavaScript externas.
+- El botón «Guardar / imprimir PDF» abre el diálogo de impresión del navegador; selecciona «Guardar como PDF».
 
-La navegación incluye acceso por teclado y un enlace para saltar al contenido. El selector ofrece español e inglés con traducciones locales; también hay un tema claro/oscuro que respeta la preferencia del sistema y guarda la selección en el navegador.
+## Personalizar los datos
 
-Las páginas usan recursos locales y una política CSP para limitar la carga de scripts, estilos, imágenes y fuentes a este sitio. El enlace externo de contacto lleva al perfil público de GitHub.
+Edita `index.html` para cambiar presentación, experiencia, formación, habilidades, idiomas, proyectos y contacto. Mantén sincronizados `data-es` y `data-en` al editar un texto traducido. `marcos.gomez@example.com` usa el dominio reservado para ejemplos y no recibe correo; reemplázalo junto al enlace `mailto:` antes de publicar. Las empresas, centros, fechas, niveles de idioma y resultados mostrados son contenido ficticio para una entrega académica: no los presentes como credenciales reales.
+
+El currículum no incluye fotografía de perfil; la portada se ha diseñado para presentar la información sin depender de una imagen personal.
+
+## Estructura principal
+
+- `index.html`: currículum completo con presentación, perfil, experiencia, formación, habilidades, idiomas, proyectos y contacto.
+- `css/portfolio.css`: sistema visual, responsive, movimiento reducido y reglas de impresión de la portada.
+- `js/scripts.js`: selector de idioma y tema, menú móvil, progreso de lectura, sección activa, animaciones discretas y diálogo de impresión.
+- `assets/img/`: favicon.
+- `experience.html`, `education.html`, `projects.html`, `skills.html`, `interests.html`: enlaces heredados a sus secciones en la página principal.
+
+## Accesibilidad y seguridad
+
+La portada incluye navegación por teclado, enlace para saltar al contenido, HTML semántico, foco visible, etiquetas accesibles, contraste revisable en ambos temas y respeto a `prefers-reduced-motion`. El diseño se ha comprobado en tamaños de móvil y escritorio; estas comprobaciones no sustituyen una auditoría WCAG completa con tecnologías de asistencia.
+
+La CSP del documento limita recursos a este mismo sitio, no se cargan bibliotecas de terceros en la portada y los enlaces externos usan `rel="noopener noreferrer"`. En producción, publica únicamente mediante HTTPS y configura también las cabeceras de seguridad desde el servidor o la plataforma de hosting: la CSP en una etiqueta `meta` es una defensa adicional, no reemplaza las cabeceras HTTP. No incluyas secretos ni información personal que no quieras hacer pública.

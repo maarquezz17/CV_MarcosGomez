@@ -3,58 +3,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; upgrade-insecure-requests" />
     <meta name="referrer" content="no-referrer" />
-    <meta name="description" content="Experiencia profesional de Marcos Gómez" />
+    <meta name="description" content="Experiencia profesional ficticia de Marcos Gómez. Sección integrada en su currículum web de demostración." />
     <title data-es="Experiencia | Marcos Gómez" data-en="Experience | Marcos Gómez">Experiencia | Marcos Gómez</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/portfolio.css" rel="stylesheet" />
     <script src="js/scripts.js" defer></script>
 </head>
-<body>
+<body class="legacy-page">
     <a class="skip-link" href="#main-content" data-es="Saltar al contenido" data-en="Skip to content">Saltar al contenido</a>
-    <div class="site-controls" role="group" aria-label="Preferencias de la página">
-        <label class="visually-hidden" for="langSelect" data-es="Idioma" data-en="Language">Idioma</label>
-        <select id="langSelect" class="control-select" aria-label="Idioma"><option value="es">Español</option><option value="en">English</option></select>
-        <button type="button" class="control-btn" id="themeToggle" aria-label="Cambiar tema de color" title="Cambiar tema de color" aria-pressed="false"><span class="theme-glyph" aria-hidden="true">◐</span></button>
-    </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav" aria-label="Navegación principal">
-        <a class="navbar-brand" href="index.html"><span class="d-block d-lg-none">Marcos Gómez</span><span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Marcos Gómez" /></span></a>
-        <button class="navbar-toggler" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Mostrar u ocultar navegación"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive"><ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="index.html"><span data-es="Sobre mí" data-en="About me">Sobre mí</span></a></li>
-            <li class="nav-item"><a class="nav-link active" href="experience.html" aria-current="page"><span data-es="Experiencia" data-en="Experience">Experiencia</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="education.html"><span data-es="Educación" data-en="Education">Educación</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="projects.html"><span data-es="Proyectos" data-en="Projects">Proyectos</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="skills.html"><span data-es="Habilidades" data-en="Skills">Habilidades</span></a></li>
-            <li class="nav-item"><a class="nav-link" href="interests.html"><span data-es="Intereses" data-en="Interests">Intereses</span></a></li>
-        </ul></div>
-    </nav>
-    <main class="container-fluid p-0" id="main-content">
-        <section class="resume-section" aria-labelledby="page-title"><div class="resume-section-content">
-            <p class="section-kicker" data-es="Trayectoria profesional" data-en="Professional journey">Trayectoria profesional</p>
-            <h1 class="mb-4" id="page-title" data-es="Experiencia" data-en="Experience">Experiencia</h1>
-            <article class="resume-entry">
-            <div class="entry-heading">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0" data-es="Desarrollador de Software Multiplataforma" data-en="Multiplatform Software Developer">Desarrollador de Software Multiplataforma</h3>
-                    <p class="entry-org">Innovatech Solutions</p>
-                </div>
-                <span class="entry-date" data-es="Julio 2023 - Presente" data-en="July 2023 - Present">Julio 2023 - Presente</span>
-            </div>
-            <p data-es="Desarrollo y mantenimiento de aplicaciones móviles nativas y multiplataforma con Flutter y Kotlin. Integración de APIs RESTful y optimización de bases de datos PostgreSQL." data-en="Developed and maintained native and cross-platform mobile applications using Flutter and Kotlin. Integrated RESTful APIs and optimized PostgreSQL databases.">Desarrollo y mantenimiento de aplicaciones móviles nativas y multiplataforma con Flutter y Kotlin. Integración de APIs RESTful y optimización de bases de datos PostgreSQL.</p>
-            </article>
-            <article class="resume-entry">
-            <div class="entry-heading">
-                <div class="flex-grow-1">
-                    <h3 class="mb-0" data-es="Desarrollador Junior Frontend" data-en="Junior Frontend Developer">Desarrollador Junior Frontend</h3>
-                    <p class="entry-org">CodeCraft Studios</p>
-                </div>
-                <span class="entry-date" data-es="Enero 2023 - Junio 2023" data-en="January 2023 - June 2023">Enero 2023 - Junio 2023</span>
-            </div>
-            <p data-es="Maquetación web responsive, desarrollo frontend con JavaScript/React y pruebas comunitarias de depuración cross-browser." data-en="Built responsive web layouts, developed frontend features with JavaScript/React, and contributed to cross-browser debugging tests.">Maquetación web responsive, desarrollo frontend con JavaScript/React y pruebas comunitarias de depuración cross-browser.</p>
-            </article>
-        </div></section>
+    <header class="legacy-header">
+        <a class="brand-mark" href="index.html"><span class="brand-monogram" aria-hidden="true">MG</span><span class="brand-name">Marcos Gómez</span></a>
+    </header>
+    <main class="legacy-message" id="main-content">
+        <div>
+            <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span><span data-es="Sección del currículum" data-en="Résumé section">Sección del currículum</span></p>
+            <h1 data-es="Experiencia" data-en="Experience">Experiencia</h1>
+            <p data-es="Esta sección forma parte del currículum de una sola página. Los datos del perfil son ficticios para una demostración académica." data-en="This section is part of the one-page résumé. Profile details are fictional and for an academic demonstration.">Esta sección forma parte del currículum de una sola página. Los datos del perfil son ficticios para una demostración académica.</p>
+            <a class="button button-primary" href="index.html#experiencia"><span data-es="Ver experiencia" data-en="View experience">Ver experiencia</span><span aria-hidden="true">↗</span></a>
+        </div>
     </main>
 </body>
 </html>
